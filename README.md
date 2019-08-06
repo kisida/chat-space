@@ -25,7 +25,7 @@ Things you may want to cover:
 * ...
 
 # chat_space DB設計
-## userテーブル
+## テーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
