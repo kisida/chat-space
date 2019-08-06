@@ -25,7 +25,7 @@ Things you may want to cover:
 * ...
 
 # chat_space DB設計
-## memberテーブル
+## userテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -35,14 +35,14 @@ Things you may want to cover:
 ### Association
 - has_many :messages
 - has_many :groups
-- has_many  :groups,  through:  :grorps_members
+- has_many  :groups,  through:  :grorps_users
 
 ## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
 |message|text|null: false|
 |image|string|null: false|
-|member_id|integer|null: false, foreigu_kye: true|
+|user_id|integer|null: false, foreigu_kye: true|
 |group_id|integer|null: false, foreigu_kye: true|
 ### Association
 - belongs_to :user
@@ -52,17 +52,17 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |groupname|string|null: false|
-|member_id|integer|null: false, foreigu_kye: true|
+|user_id|integer|null: false, foreigu_kye: true|
 ### Association
 - has_many :messages
-- has_many :groups_members
-- has_many  :members,  through:  :grorps_members
+- has_many :groups_users
+- has_many  :users,  through:  :grorps_users
 
-## group_memberテーブル
+## group_userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|member_id|integer|null: false, foreigu_kye: true|
+|user_id|integer|null: false, foreigu_kye: true|
 |group_id|integer|null: false, foreigu_kye: true|
 ### Association
-- belongs_to :member
+- belongs_to :user
 - belongs_to :group
