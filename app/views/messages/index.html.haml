@@ -1,0 +1,77 @@
+.flash-box
+.wrapper
+  .chat-side
+    .side-header
+      %p.side-header__user-name 岸田明久
+      %ul.user-menu
+        %li.user-menu__new-group
+          %a{href:"#"}
+            %i.fa.fa-edit
+        %li.user-menu__edit-user
+          %a{href:"#"}
+            %i.fa.fa-cog
+           
+            
+    .groups
+      %a{href:"/groups/1964/messages"}
+        .group
+          %p.group__group-name Sample
+          %p.group__latest-message まだメッセージがありません
+      %a{href:"/groups/1956/messages"}
+        .group
+          %p.group__group-name techex
+          %p.group__latest-message techcamp
+      %a{href:"/groups/1955/messages"}
+        .group
+          %p.group__group-name techcamp
+          %p.group__latest-message まだメッセージがありません
+      %a{href:"/groups/1954/messages"}
+        .group
+          %p.group__group-name tech
+          %p.group__latest-message まだメッセージがありません
+  
+  
+  
+  .chat-main
+    .main-header
+      .current-group
+        %h2.current-group__name techex
+        %ul.member-list
+          Member：
+          %li.member-list__member 岸田明久
+      %a{href:"/groups/1956/edit"}  
+        .main-header__edit-btn Edit
+    .messages
+      .message
+        .upper-info
+          %p.upper-info__user 岸田明久
+          %p.upper-info__date 2019/08/06(Tue) 20:16:46
+        %p.message__text techcamp
+      .message
+        .upper-info
+          %p.upper-info__user 岸田明久
+          %p.upper-info__date 2019/08/06(Tue) 20:16:49
+        %p.message__text aaa
+      .message
+        .upper-info
+          %p.upper-info__user 岸田明久
+          %p.upper-info__date 2019/08/06(Tue) 20:16:52
+        %p.message__text techcamp
+      .message
+        .upper-info
+          %p.upper-info__user 岸田明久
+          %p.upper-info__date 2019/08/06(Tue) 20:16:55
+        %p.message__text aaa
+      .message
+        .upper-info
+          %p.upper-info__user 岸田明久
+          %p.upper-info__date 2019/08/06(Tue) 20:17:08
+        %p.message__text techcamp
+    .form
+      %form#new_message.new-message
+        .input-box
+          %input#message_content.input-box__text
+          %label.image-label
+            %i.fa.fa-image
+            %input#message_image.image-label__input
+        %input.new-message__submit-btn

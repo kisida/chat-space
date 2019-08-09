@@ -1,0 +1,59 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.flash-box{
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-align: center;
+  width: 100vw;
+}
+.wrapper{
+  display: block;
+  .chat-side{
+    width: 300px;
+    color: #ffffff;
+    float: left;
+
+  }
+}
+
+
+.side-header{
+  background-color: #253141;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: bold;
+  &__user-name{
+    display: block;
+  }
+  .user-menu {
+    list-style: none;
+    display: flex;    
+    &__new-group,&__edit-user{
+      margin-left: 0.3rem;
+      display: list-item;
+      // text-align: -webkit-match-parent;
+      a, a:hover, a:visited{
+        text-decoration: none;
+        color:white;
+      }
+    } 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
