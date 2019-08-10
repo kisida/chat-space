@@ -1,96 +1,148 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-  .flash-box{
-      color: #ffffff;
-      font-size: 1rem;
-      font-weight: lighter;
-      text-align: center;
-      width: 100vw;
-  }
   .wrapper{
     display: block;
-    .chat-side{
-        width: 300px;
-        color: #ffffff;
-        float: left;
+        .groups{
+          height: calc(100vh - 100px);
+          background-color: #2f3e51;
+          padding: 20px 20px 0;
+          overflow: scroll;
+          a{
+            text-decoration: none;
+          }
+          .group{
+            color:#ffffff;
+            margin-bottom: 40px;
+            &__group-name{
+              font-size: 15px;
+              margin-bottom: 5px
+            }
+            &__latest-message{
+              font-size: 11px;
+            }
+    }  
+  }
+  }
 
-      
-    
-
-
-      .side-header{
-        background-color: #253141;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        padding: 0 20px;
-        justify-content: space-between;
-        width: 100%;
-        font-weight: bold;
-        &__user-name{
-          display: block;
+.chat-side{
+  width: 300px;
+  color: #ffffff;
+  float: left;
+    &__header{
+      background-color: #253141;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+      &__user-name{
+      display: block;
         }
         .user-menu {
           list-style: none;
           display: flex;    
           &__new-group,&__edit-user{
-            margin-left: 0.3rem;
-            display: list-item;
-            // text-align: -webkit-match-parent;
-            a, a:hover, a:visited{
-              text-decoration: none;
-              color:white;
-            }
-          } 
-        }
-      
-
-
-
-
-
-
-      .groups
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
+          margin-left: 0.3rem;
+          display: list-item;
+          }
+          a, a:hover, a:visited{
+            text-decoration: none;
+            color:white;
+          }
+        } 
+    }
+  }
+.chat-main{
+  width: calc(100vw - 300px);
+  float: right;
+  a{
+    text-decoration: none;
+  }
+  &__header{
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #eee;
+    &__edit-btn{
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      color: #38aef0;
       
     }
-    .chat-main
-      .main-header
-        .current-group
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    .form
+  
+    .current-group{
+      font-size: 20px;
+      color: #333;
+      margin-top: 35px;
+      &__name{
+        font-size: 100%;
+        font-weight: normal;
+      }
+      &__member-list{
+        display: flex;
+        margin-top: 15px;
+        font-size: 12px;
+        color: #999999;
+        &__member{
+          
+        }
+      }
+    }
 
+  }
 
+  .messages{
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    background-color: #fafafa;
+    overflow: scroll;
+    
+    .message{
+      padding-bottom: 40px;
 
-   }
+      &__text{
+        color: #434a54;
+        font-size: 14px;
+        margin-bottom: 10px;
+      } 
+    }
+  }
 
+  .upper-info{
+    display: flex;
+    margin-bottom: 10px;
 
+    &__user{
+      color: #434a54;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &__day{
+      color: #999999;
+      font-size: 12px;
+      margin-left: 10px;
+    }
+  }
 
+   .form{
+     height: 90px;
+     padding: 20px 40px;
+     background-color: #ddd;
+     .new-message{
+       display: flex;
+       .input-box__text{
+        position: relative; 
+        width: 100%;
+       }
+     }
 
+    }
 
-
+  }
