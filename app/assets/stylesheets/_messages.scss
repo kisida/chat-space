@@ -1,14 +1,21 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-  .wrapper{
+.flash-box{
+  color: white;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-align: center;
+  width: 100vw;
+}  
+.wrapper{
     display: block;
         .groups{
           height: calc(100vh - 100px);
           background-color: #2f3e51;
           padding: 20px 20px 0;
           overflow: scroll;
-          a{
+          link_to{
             text-decoration: none;
           }
           .group{
@@ -48,7 +55,7 @@
           margin-left: 0.3rem;
           display: list-item;
           }
-          a, a:hover, a:visited{
+          link_to, a:hover, a:visited{
             text-decoration: none;
             color:white;
           }
@@ -58,7 +65,7 @@
 .chat-main{
   width: calc(100vw - 300px);
   float: right;
-  a{
+  link_to{
     text-decoration: none;
   }
   &__header{
@@ -106,7 +113,6 @@
     
     .message{
       padding-bottom: 40px;
-
       &__text{
         color: #434a54;
         font-size: 14px;
@@ -130,19 +136,39 @@
       margin-left: 10px;
     }
   }
-
+  .new-message {
+    display: flex;
+  }
    .form{
      height: 90px;
      padding: 20px 40px;
+     position: relative; 
      background-color: #ddd;
-     .new-message{
+    
+     .input-box{
        display: flex;
-       .input-box__text{
-        position: relative; 
-        width: 100%;
-       }
-     }
-
+       &__text{
+        height: 50px;
+        width: 1000px;
+      }
+      .image-label{
+      position: absolute;
+      font-size: 1.3rem;
+      top: 30px;
+    cursor: pointer;
+      right: 110px;
+      }
+    }
+    
+      .new-message__submit-btn{
+        height: 50px;
+        width:  85px;
+        position: absolute;
+        right: 5px;
+        margin-left: 15px;
+        color: #ffffff;
+        background-color: #38aef0;
+      }
     }
 
   }

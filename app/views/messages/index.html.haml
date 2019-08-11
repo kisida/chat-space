@@ -1,28 +1,29 @@
+.flash-box
 .wrapper
   .chat-side
     .chat-side__header
       %p.side-header__user-name 岸田明久
       %ul.user-menu
         %li.user-menu__new-group
-          %a{href:"#"}
+          %link_to{href:"#"}
             %i.fa.fa-edit
         %li.user-menu__edit-user
-          %a{href:"#"}
+          %link_to{href:"#"}
             %i.fa.fa-cog
     .groups
-      %a{href:"/groups/1964/messages"}
+      %link_to{href:"/#"}
         .group
           %p.group__group-name Sample
           %p.group__latest-message まだメッセージがありません
-      %a{href:"/groups/1956/messages"}
+      %link_to{href:"/#"}
         .group
           %p.group__group-name techex
           %p.group__latest-message techcamp
-      %a{href:"/groups/1955/messages"}
+      %link_to{href:"/#"}
         .group
           %p.group__group-name techcamp
           %p.group__latest-message まだメッセージがありません
-      %a{href:"/groups/1954/messages"}
+      %link_to{href:"/#"}
         .group
           %p.group__group-name tech
           %p.group__latest-message まだメッセージがありません
@@ -33,9 +34,10 @@
         %ul.current-group__member-list 
           Member：
           %li.current-group__member-list__member 岸田明久
-      %a{href:"/groups/1956/edit"}  
+      %link_to{href:"/#"}  
         .chat-main__header__edit-btn Edit  
     
+     =render
     .messages
       .message
         .upper-info
