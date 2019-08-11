@@ -1,0 +1,12 @@
+.user-menu {
+          list-style: none;
+          display: flex;    
+          &__new-group,&__edit-user{
+          margin-left: 0.3rem;
+          display: list-item;
+          }
+          link_to, a:hover, a:visited{
+            color: $siro;
+            text-decoration: none;
+          }
+        } 
