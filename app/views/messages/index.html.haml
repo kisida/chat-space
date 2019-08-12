@@ -1,0 +1,34 @@
+.flash-box
+.wrapper
+  .chat-side
+    .chat-side__header
+      %p.side-header__user-name 岸田明久
+      %ul.user-menu
+        %li.user-menu__new-group
+          %link_to{href:"#"}
+            %i.fa.fa-edit
+        %li.user-menu__edit-user
+          %link_to{href:"#"}
+            %i.fa.fa-cog
+    .groups
+      =render "groups"
+        
+  .chat-main
+    .chat-main__header
+      .current-group
+        %h2.current-group__name techex
+        %ul.current-group__member-list 
+          Member：
+          %li.current-group__member-list__member 岸田明久
+      %link_to{href:"/#"}  
+        .chat-main__header__edit-btn Edit  
+    .messages
+      =render "messages"
+    .form
+      %form#new_message.new-message
+        .input-box
+          %input#message_content.input-box__text{type:"text",placeholder:"メッセージを打ってください"}
+          %label.image-label{for: "file-load"}
+            %i.fa.fa-image
+            %input#file-load{type:"file"}
+        %input.new-message__submit-btn{type:"submit",Value:"send"}

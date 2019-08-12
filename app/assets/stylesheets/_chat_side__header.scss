@@ -1,0 +1,19 @@
+.chat-side{
+  width: 300px;
+  float: left;
+    &__header{
+      background-color: #253141;
+      color: $white;
+      height: 100px;
+      @include flex();
+      align-items: center;
+      padding: 0 20px;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+      &__user-name{
+      display: block;
+        }
+        
+    }
+  }

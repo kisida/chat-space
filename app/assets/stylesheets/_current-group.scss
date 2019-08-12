@@ -1,0 +1,15 @@
+    .current-group{
+      font-size: 20px;
+      color: #333;
+      margin-top: 35px;
+      &__name{
+        font-size: 100%;
+        font-weight: normal;
+      }
+      &__member-list{
+        @include flex();
+        margin-top: 15px;
+        font-size: 12px;
+        color: #999999;
+      }
+    }

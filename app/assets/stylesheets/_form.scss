@@ -1,0 +1,34 @@
+.form{
+  height: 90px;
+  padding: 20px 40px;
+  position: relative; 
+  background-color: #ddd;
+ 
+  .input-box{
+    @include flex();
+    &__text{
+     height: 50px;
+     width: 1000px;
+   }
+   .image-label{
+   position: absolute;
+   font-size: 1.3rem;
+   top: 30px;
+ cursor: pointer;
+   right: 110px;
+   }
+   #file-load{
+    display: none;
+   }
+ }
+ 
+   .new-message__submit-btn{
+     height: 50px;
+     width:  85px;
+     position: absolute;
+     right: 5px;
+     margin-left: 15px;
+     color: $white;
+     background-color: #38aef0;
+   }
+ }
