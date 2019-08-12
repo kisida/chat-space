@@ -3,7 +3,7 @@
   float: left;
     &__header{
       background-color: #253141;
-      color: $siro;
+      color: $white;
       height: 100px;
       @include flex();
       align-items: center;
