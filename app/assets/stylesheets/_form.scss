@@ -5,7 +5,7 @@
   background-color: #ddd;
  
   .input-box{
-    display: flex;
+    @include flex();
     &__text{
      height: 50px;
      width: 1000px;
@@ -16,6 +16,9 @@
    top: 30px;
  cursor: pointer;
    right: 110px;
+   }
+   #file-load{
+    display: none;
    }
  }
  

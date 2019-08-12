@@ -1,5 +1,5 @@
 .upper-info{
-  display: flex;
+  @include flex();
   margin-bottom: 10px;
 
   &__user{

@@ -1,6 +1,6 @@
 .user-menu {
           list-style: none;
-          display: flex;    
+          @include flex();   
           &__new-group,&__edit-user{
           margin-left: 0.3rem;
           display: list-item;

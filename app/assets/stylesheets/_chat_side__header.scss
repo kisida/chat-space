@@ -5,7 +5,7 @@
       background-color: #253141;
       color: $siro;
       height: 100px;
-      display: flex;
+      @include flex();
       align-items: center;
       padding: 0 20px;
       justify-content: space-between;

@@ -11,22 +11,8 @@
           %link_to{href:"#"}
             %i.fa.fa-cog
     .groups
-      %link_to{href:"/#"}
-        .group
-          %p.group__group-name Sample
-          %p.group__latest-message まだメッセージがありません
-      %link_to{href:"/#"}
-        .group
-          %p.group__group-name techex
-          %p.group__latest-message techcamp
-      %link_to{href:"/#"}
-        .group
-          %p.group__group-name techcamp
-          %p.group__latest-message まだメッセージがありません
-      %link_to{href:"/#"}
-        .group
-          %p.group__group-name tech
-          %p.group__latest-message まだメッセージがありません
+      =render "groups"
+        
   .chat-main
     .chat-main__header
       .current-group
@@ -36,38 +22,13 @@
           %li.current-group__member-list__member 岸田明久
       %link_to{href:"/#"}  
         .chat-main__header__edit-btn Edit  
-    
     .messages
-      .message
-        .upper-info
-          %p.upper-info__user 岸田明久
-          %p.upper-info__day 2019/08/06(Tue) 20:16:46
-        %p.message__text techcamp
-      .message
-        .upper-info
-          %p.upper-info__user 岸田明久
-          %p.upper-info__day 2019/08/06(Tue) 20:16:49
-        %p.message__text aaa
-      .message
-        .upper-info
-          %p.upper-info__user 岸田明久
-          %p.upper-info__day 2019/08/06(Tue) 20:16:52
-        %p.message__text techcamp
-      .message
-        .upper-info
-          %p.upper-info__user 岸田明久
-          %p.upper-info__day 2019/08/06(Tue) 20:16:55
-        %p.message__text aaa
-      .message
-        .upper-info
-          %p.upper-info__user 岸田明久
-          %p.upper-info__day 2019/08/06(Tue) 20:17:08
-        %p.message__text techcamp
-    
+      =render "messages"
     .form
       %form#new_message.new-message
         .input-box
-          %input#message_content.input-box__text{type:"text"}
-          %label.image-label
+          %input#message_content.input-box__text{type:"text",placeholder:"メッセージを打ってください"}
+          %label.image-label{for: "file-load"}
             %i.fa.fa-image
+            %input#file-load{type:"file"}
         %input.new-message__submit-btn{type:"submit",Value:"send"}

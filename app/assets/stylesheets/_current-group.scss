@@ -7,7 +7,7 @@
         font-weight: normal;
       }
       &__member-list{
-        display: flex;
+        @include flex();
         margin-top: 15px;
         font-size: 12px;
         color: #999999;
