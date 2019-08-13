@@ -3,7 +3,7 @@
 @import "./variable";
 @import "./font-awesome";
 
-
+@import "modules/user";
 @import "./messages";
 @import "./chat_side__header";
 @import "./user-menu";
@@ -14,3 +14,5 @@
 @import "./current-group";
 @import "./groups";
 @import "./new-message";
+@import "config/colors";
+@import "modules/flash";
