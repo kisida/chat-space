@@ -1,4 +1,17 @@
-%link_to{href:"/#"}
+- current_user.groups.each do |group|
   .group
-    %p.group__group-name Sample
-    %p.group__latest-message まだメッセージがありません
+  = link_to group_messages_path(group) do
+    %p.group__group-name
+      = group.name
+    %p.group__latest-message 
+      = group.show_last_message
+
+
+
+
+      -# - current_user.groups.each do |group|
+      -#   = link_to group_messages_path(group) do
+      -#     .group__name
+      -#       = group.name
+      -#     .group__message
+      -#       = group.show_last_message
