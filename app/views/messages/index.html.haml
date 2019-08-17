@@ -2,13 +2,14 @@
 .wrapper
   .chat-side
     .chat-side__header
-      %p.side-header__user-name 岸田明久
+      %p.side-header__user-name
+        = current_user.name
       %ul.user-menu
         %li.user-menu__new-group
-          %link_to{href:"#"}
+          = link_to new_group_path do
             %i.fa.fa-edit
         %li.user-menu__edit-user
-          %link_to{href:"#"}
+          =link_to edit_user_path(current_user) do
             %i.fa.fa-cog
     .groups
       =render "groups"
@@ -16,11 +17,13 @@
   .chat-main
     .chat-main__header
       .current-group
-        %h2.current-group__name techex
+        %h2.current-group__name 
+          = @group.name 
         %ul.current-group__member-list 
           Member：
-          %li.current-group__member-list__member 岸田明久
-      %link_to{href:"/#"}  
+          = current_user.name
+          %li.current-group__member-list__member 
+      = link_to edit_group_path(@group) do
         .chat-main__header__edit-btn Edit  
     .messages
       = render @messages
@@ -32,8 +35,6 @@
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'new-message__submit-btn'
-        
-
         
       -# %form#new_message.new-message
       -#   .input-box
