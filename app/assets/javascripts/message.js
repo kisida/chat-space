@@ -5,18 +5,18 @@ $(function(){
       image = `<img class="lower-message__image" src="${message.image.url}" alt="Img 2171">`;
       }
     var html = `<div class="message">
-<div class="upper-info">
-<div class="upper-info__user">
-${message.user_name}
-</div>
-<div class="upper-info__day">
-${message.day}
-</div>
-</div>
-<div class="message.content">
-${message.text}
-${image}
-</div>
+  <div class="upper-info">
+    <div class="upper-info__user">
+      ${message.user_name}
+    </div>
+    <div class="upper-info__day">
+    ${message.day}
+    </div>
+  </div>
+  <div class="message.content">
+    ${message.text}
+      ${image}
+  </div>
 </div>`
     return html;
   }
@@ -24,7 +24,7 @@ ${image}
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
-    
+    $('#new_message')[0].reset();
   
     $.ajax({
       url: url,
