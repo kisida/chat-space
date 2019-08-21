@@ -41,11 +41,11 @@ ${image}
     $('text').val('')
     $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
 
-    return false
 
   })
   .fail(function(){
     alert('error');
   })
+  return false;
 })
 })
