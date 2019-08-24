@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
 
  def index
- @usar  = User.new
- @users = 
+ @user  = User.new 
 end
 
 
@@ -17,6 +16,9 @@ end
     end
   end
 
+
+
+  
   private
 
   def user_params
