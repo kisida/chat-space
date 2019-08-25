@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: :search
- def index
- @user  = User.new 
-end
+  before_action only: :index
+  def index
+    @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
+    respond_to do |format|
+      format.html
+      format.json
+  end
 
 
   def edit
@@ -16,12 +19,7 @@ end
     end
   end
 
-def search
-  @Users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
-  respond_to do |format|
-    format.html
-    format.json
-  end
+
 end
 
 
