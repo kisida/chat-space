@@ -2,7 +2,7 @@
 $(function() {
 
     var searchuser = $('#user-search-result');
-    var chatuser =   $('.chat-group-users');
+    var chatuser =   $('#add-menber');
 
     function appendUser(user) {
       var html = `<div class="chat-group-user clearfix">
@@ -20,10 +20,10 @@ $(function() {
      searchuser.append(html)
   }
 
-  function appendChatUser(chat){
+  function appendChatUser(id,name){
         var html =`<div class='chat-group-user'>
-                    <input name='group[user_ids][]' type='hidden' value='${user.id}'>
-                    <p class='chat-group-user__name'>${user.name}</p>
+                    <input name='group[user_ids][]' type='hidden' value='${id}'>
+                    <p class='chat-group-user__name'>${name}</p>
                     <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
                    </div>`
      chatuser.append(html)
@@ -55,17 +55,15 @@ $(function() {
         alert('ユーザー検索に失敗しました');
       })
     });
-
     $(document).on("click", ".user-search-add", function () {
-      console.log(this);
-      thisからidとnameをもらう
-      チャットメンバーに表示する
-      $(this).親要素取得するメソッド.消すメソッド
-
-      // (".chat-group-user").remove()
+        id= $(this).data("userId")
+      name= $(this).data("userName")
+      appendChatUser(id,name);
+      
+      $(this).parent().remove();
     });
-    $(document).on("click", ".chat-group-user__btn", function (chat) {
-      appendChatUser(chat);
+    $(document).on("click", ".user-search-remove", function () {
+      $(this).parent().remove();
     });
   });
 });
