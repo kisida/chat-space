@@ -9,7 +9,7 @@ $(function() {
                     <p class="chat-group-user__name">${user.name}</p>
                     <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id=${user.id} data-user-name=${user.name}>追加</div>
                   </div>`
-      //appendUser(html);
+                  
       searchuser.append(html)
   }
 
@@ -32,7 +32,6 @@ $(function() {
     $("#user-search-field").on("keyup", function() {
       var input = $("#user-search-field").val();
 
-      //$('#user-search-field')[0].reset();
       $.ajax({
         type: 'GET',
         url: '/users',
@@ -59,7 +58,7 @@ $(function() {
         id= $(this).data("userId")
       name= $(this).data("userName")
       appendChatUser(id,name);
-      
+
       $(this).parent().remove();
     });
     $(document).on("click", ".user-search-remove", function () {
