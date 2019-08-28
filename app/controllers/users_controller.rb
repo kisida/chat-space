@@ -1,4 +1,13 @@
 class UsersController < ApplicationController
+  before_action only: :index
+  def index
+
+    @users = User.where('name LIKE(?) and id != ?', "%#{params[:keyword]}%",current_user.id)
+    respond_to do |format|
+      format.html
+      format.json
+  end
+
 
   def edit
   end
@@ -11,6 +20,11 @@ class UsersController < ApplicationController
     end
   end
 
+
+end
+
+
+  
   private
 
   def user_params
