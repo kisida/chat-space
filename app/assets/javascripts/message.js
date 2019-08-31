@@ -50,8 +50,7 @@ $(function(){
   
     var reloadMessages = function() {
     if(location.href.match(/groups\/\d+\/messages/)){}else
-    {
-      return
+      reurn
     }
     console.log("ok");
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
@@ -81,7 +80,8 @@ $(function(){
     .fail(function() {
       console.log('error');
     })
-  };
-  setInterval(reloadMessages, 5000);
+    setInterval(reloadMessages, 5000);
+  });
+  
 });
-})
+
