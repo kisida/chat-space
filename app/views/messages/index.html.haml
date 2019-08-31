@@ -30,12 +30,12 @@
       = render @messages
     .form
       = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'input-box__text', placeholder: 'メッセージを打ってください'
         .input-box
+          = f.text_field :content, class: 'input-box__text', placeholder: 'メッセージを打ってください'
           = f.label :image, class: 'image-label' do
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'new-message__submit-btn'
+          = f.submit 'Send', class: 'new-message__submit-btn'
         
       -# %form#new_message.new-message
       -#   .input-box

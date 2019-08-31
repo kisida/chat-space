@@ -58,6 +58,7 @@ $(function() {
     $(document).on("click", ".user-search-add", function () {
         id= $(this).data("userId")
       name= $(this).data("userName")
+      console.log(id, name);
       appendChatUser(id,name);
 
       $(this).parent().remove();
