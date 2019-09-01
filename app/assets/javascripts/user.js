@@ -29,7 +29,7 @@ $(function() {
      chatuser.append(html)
 }
   $(function() {
-    $("#user-search-field").on("keyup", function() {
+    $("#user-search-field").on("input", function() {
       var input = $("#user-search-field").val();
 
       $.ajax({
@@ -38,6 +38,7 @@ $(function() {
         data: { keyword: input },
         dataType: 'json'
       })
+      
 
       .done(function(users) {
         $('#user-search-result').empty();
