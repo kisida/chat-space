@@ -42,6 +42,10 @@ $(function(){
     .fail(function(){
       alert('error');
     })
+    .always(function(){
+      $('.new-message__submit-btn').prop("disabled",false);
+  //  removeでも出来る
+    })
   })
 
     var reloadMessages = function() {
