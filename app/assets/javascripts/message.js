@@ -1,9 +1,7 @@
 $(function(){
   function buildHTML(message){
-   var image = ``
-    if (message.image.url) {
-      image = `<img class="lower-message__image" src="${message.image.url}" alt="Img 2171">`;
-      }
+   
+      var image = message.image.url ? `<img class="lower-message__image" src="${message.image.url}" alt="Img 2171">` : "";
     var html = 
     `<div class="message" data-id="${message.id}">
   <div class="upper-info">
@@ -50,7 +48,6 @@ $(function(){
 
     if(location.href.match(/groups\/\d+\/messages/)){
     }else{
-
       return
     }
 
