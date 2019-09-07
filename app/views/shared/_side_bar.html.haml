@@ -3,7 +3,8 @@
 .wrapper
   .chat-side
     .chat-side__header
-      %p.side-header__user-name 岸田明久
+      %p.side-header__user-name 
+        =current_user.name
       %ul.user-menu
         %li.user-menu__new-group
           = link_to new_group_path do
