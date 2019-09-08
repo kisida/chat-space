@@ -1,4 +1,5 @@
 
+$(document).on('turbolinks:load', function() { 
 $(function() {
 
     var searchuser = $('#user-search-result');
@@ -28,6 +29,7 @@ $(function() {
                    </div>`
      chatuser.append(html)
 }
+
   $(function() {
     $("#user-search-field").on("input", function() {
       var input = $("#user-search-field").val();
@@ -67,3 +69,15 @@ $(function() {
     });
   });
 });
+});
+
+
+
+
+
+
+// ここに仮でかく
+
+・ current_user_id = $('').attr("");
+if(currebt_user.id ==user.id
+$('user-seach-remove')appendChatUser('display', 'none');
