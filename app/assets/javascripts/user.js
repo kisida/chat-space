@@ -71,13 +71,3 @@ $(function() {
 });
 });
 
-
-
-
-
-
-// ここに仮でかく
-
-・ current_user_id = $('').attr("");
-if(currebt_user.id ==user.id
-$('user-seach-remove')appendChatUser('display', 'none');
