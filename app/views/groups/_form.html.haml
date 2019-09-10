@@ -25,11 +25,14 @@
     .chat-group-form__field--right
       #add-menber 
       -@group.users.each do|user|
-        .chat-group-user
+        .chat-group-user{data:{user:{id:'chat-group-user.id'}}}
           %input{name:"group[user_ids][]", type:"hidden", value:user.id}
           %p.chat-group-user__name  
-            ="#{user.name}" 
-         
+            ="#{user.name}"
+            -if current_user.id != user.id
+              .user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
+            %end
+          / current_userを表示する記述と、current_user以外のメンバーを表示する記述
   
  
       
