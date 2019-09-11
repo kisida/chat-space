@@ -54,7 +54,6 @@ $(function(){
     }else{
       return
     }
-
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     last_message_id = $('.message:last').data('id')
     var url = location.pathname;
